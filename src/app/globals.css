@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark theme default - Chinook Cyber design system */
+  --bg-base: #1d1f1d;
+  --bg-surface: #2c2e2c;
+  --bg-raised: #343734;
+  --bg-overlay: #3a3d39;
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-default: #43463f;
+  --border-strong: #565a51;
+  --text-primary: #eef1ea;
+  --text-secondary: #9aa39a;
+  --text-muted: #6f756c;
+  --text-inverse: #1d1f1d;
+  
+  --color-observation: #6fa8ff;
+  --color-avenue: #eaa15a;
+  --color-obstacle: #2dd4bf;
+  --color-key-terrain: #6fa777;
+  --color-cover: #c084fc;
+
+  --tint-observation: rgba(111, 168, 255, 0.10);
+  --tint-avenue: rgba(234, 161, 90, 0.09);
+  --tint-obstacle: rgba(45, 212, 191, 0.09);
+  --tint-key-terrain: rgba(111, 167, 119, 0.11);
+  --tint-cover: rgba(192, 132, 252, 0.09);
+}
+
+@theme inline {
+  --color-bg-base: var(--bg-base);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-raised: var(--bg-raised);
+  --color-bg-overlay: var(--bg-overlay);
+  
+  --color-border-subtle: var(--border-subtle);
+  --color-border-default: var(--border-default);
+  --color-border-strong: var(--border-strong);
+  
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
+
+  --color-observation: var(--color-observation);
+  --color-avenue: var(--color-avenue);
+  --color-obstacle: var(--color-obstacle);
+  --color-key-terrain: var(--color-key-terrain);
+  --color-cover: var(--color-cover);
+
+  --color-tint-observation: var(--tint-observation);
+  --color-tint-avenue: var(--tint-avenue);
+  --color-tint-obstacle: var(--tint-obstacle);
+  --color-tint-key-terrain: var(--tint-key-terrain);
+  --color-tint-cover: var(--tint-cover);
+  
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism utilities */
+@layer utilities {
+  .glass-panel {
+    background: rgba(44, 46, 44, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+  }
+}
