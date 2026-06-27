@@ -1,6 +1,10 @@
-import Image from "next/image";
+"use client";
 
+import { useState } from "react";
+import Image from "next/image";
+import { AboutDialog } from "@/components/AboutDialog";
 export default function Home() {
+  const [aboutOpen, setAboutOpen] = useState(false);
   return (
     <main className="h-screen w-screen flex flex-col md:flex-row overflow-hidden relative bg-bg-base text-text-primary">
       {/* Floating Logo */}
@@ -68,6 +72,18 @@ export default function Home() {
           </div>
         </div>
       </a>
+
+      {/* Footer / Legal */}
+      <div className="absolute bottom-4 right-4 z-50">
+        <button
+          onClick={() => setAboutOpen(true)}
+          className="text-xs text-text-secondary hover:text-text-primary transition-colors"
+        >
+          About &amp; legal
+        </button>
+      </div>
+
+      <AboutDialog open={aboutOpen} onClose={() => setAboutOpen(false)} />
     </main>
   );
 }
