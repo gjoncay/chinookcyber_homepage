@@ -8,19 +8,21 @@ export default function Home() {
   return (
     <main className="h-screen w-screen flex flex-col md:flex-row overflow-hidden relative bg-bg-base text-text-primary">
       {/* Floating Logo */}
-      <a 
-        href="https://www.linkedin.com/in/grant-oncay-b340b0243" 
-        target="_blank" 
-        rel="noreferrer"
-        className="absolute top-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-bg-surface/80 backdrop-blur-md px-6 py-3 rounded-full border border-border-subtle shadow-xl transition-transform hover:scale-105"
-      >
-        <img 
-          src="/chinook-logo.png" 
-          alt="Chinook Cyber" 
-          className="h-8 object-contain"
-        />
-        <span className="font-semibold tracking-wide text-text-primary">Chinook Cyber</span>
-      </a>
+      <div className="w-full shrink-0 flex justify-center pt-6 pb-2 md:pt-0 md:pb-0 md:block md:w-auto md:absolute md:top-8 md:left-1/2 md:-translate-x-1/2 z-50">
+        <a 
+          href="https://www.linkedin.com/in/grant-oncay-b340b0243" 
+          target="_blank" 
+          rel="noreferrer"
+          className="flex items-center gap-3 bg-bg-surface/80 backdrop-blur-md px-6 py-3 rounded-full border border-border-subtle shadow-xl transition-transform hover:scale-105"
+        >
+          <img 
+            src="/chinook-logo.png" 
+            alt="Chinook Cyber" 
+            className="h-8 object-contain"
+          />
+          <span className="font-semibold tracking-wide text-text-primary">Chinook Cyber</span>
+        </a>
+      </div>
 
       {/* Left Panel - Cyber Planner */}
       <a 
